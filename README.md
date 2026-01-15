@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# Marketing Banner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, responsive, and pixel-perfect marketing banner component built with React 19, TypeScript, and Vite. This project implements a brand-specific design featuring flexible grid layouts, localized content, and comprehensive test coverage.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Pixel-Perfect Design**: Implemented according to strict brand guidelines (Poppins font, specific hex codes, and precise spacing).
+- **Fully Responsive**: Optimized for viewport widths from 320px to 700px+, with custom breakpoints at 360px and 600px.
+- **Micro-Interactions**: Smooth hover animations for primary buttons and text links.
+- **CSS Grid Layout**: Advanced layout management for vertical centering and complex positioning.
+- **Localization (i18n)**: Centralized text management in [src/i18n](src/i18n/index.ts).
+- **Close Functionality**: Integrated state management in [App.tsx](src/App.tsx) to dismiss and restore the banner.
+- **Robust Testing**: 49 unit tests covering all components and interactions.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 19
+- **Build Tool**: Vite 7
+- **Language**: TypeScript 5
+- **Styling**: CSS Modules
+- **Testing**: Vitest + React Testing Library
+- **Package Manager**: pnpm
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Ensure you have [Node.js](https://nodejs.org/) (v18+) and [pnpm](https://pnpm.io/) installed.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   cd finom-banner
+   ```
+
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+### Development
+
+Start the development server with HMR:
+
+```bash
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Testing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Run the full test suite (49 tests):
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm test
 ```
+
+_Note: Experimental Node warnings are suppressed in the test script for a cleaner output._
+
+### Production Build
+
+Create an optimized production build:
+
+```bash
+pnpm build
+```
+
+Preview the build locally:
+
+```bash
+pnpm preview
+```
+
+## 🏗 Project Structure
+
+- [src/components/Banner](src/components/Banner/Banner.tsx): Core banner component and its grid styling.
+- [src/components/ui](src/components/ui): Reusable atomic UI components (Button, Link, CheckList, etc.).
+- [src/i18n](src/i18n/index.ts): Central source for all localized strings.
+- [src/assets](src/assets): Image and graphic assets.
+
+## 🎨 Design Constraints
+
+- **Mobile View**: Max-width of 335px with a 295px internal content area.
+- **Desktop View**: Scaled to 700px with a side-by-side feature list.
+- **Typography**: Poppins (600 for titles, 500 for links/lists, 400 for body).
