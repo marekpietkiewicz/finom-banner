@@ -59,6 +59,7 @@ const Banner: FC<BannerProps> = ({
               href={secondaryLinkHref}
               external
               testId={testId ? `${testId}-secondary-link` : undefined}
+              className={styles.secondaryLink}
             >
               {secondaryLinkText}
             </Link>

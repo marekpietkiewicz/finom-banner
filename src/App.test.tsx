@@ -25,7 +25,6 @@ describe("App", () => {
     const closeButton = screen.getByLabelText(t.banner.closeButtonAriaLabel);
     fireEvent.click(closeButton);
     expect(screen.queryByText(t.banner.title)).not.toBeInTheDocument();
-    expect(screen.getByText(t.app.bannerRemovedText)).toBeInTheDocument();
   });
 
   it("shows the banner again when Show Again button is clicked", () => {

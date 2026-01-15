@@ -28,7 +28,6 @@ function App() {
     return (
       <div className="app-container">
         <p className="banner-removed-text">
-          {t.app.bannerRemovedText}
           <button className="reset-button" onClick={() => setIsVisible(true)}>
             {t.app.showAgainButton}
           </button>

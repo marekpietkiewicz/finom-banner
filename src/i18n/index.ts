@@ -9,7 +9,6 @@ export interface Translations {
     coinImageAlt: string;
   };
   app: {
-    bannerRemovedText: string;
     showAgainButton: string;
   };
 }
@@ -30,8 +29,7 @@ const en: Translations = {
     coinImageAlt: "Coins illustration",
   },
   app: {
-    bannerRemovedText: "Banner has been removed from DOM.",
-    showAgainButton: "Show Again",
+    showAgainButton: "Click me",
   },
 };
 
