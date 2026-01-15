@@ -1,0 +1,174 @@
+.banner {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  max-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.banner:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+}
+
+.content {
+  display: flex;
+  gap: 24px;
+}
+
+.mainContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.sideContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.title {
+  color: #1a3a5c;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  padding-right: 40px;
+}
+
+.description {
+  color: #6b7b8c;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+.checklistMobile {
+  display: none;
+  margin-bottom: 24px;
+}
+
+.checklistDesktop {
+  display: block;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.coinImage {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.coinImage:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .banner {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .coinImage {
+    width: 120px;
+  }
+}
+
+/* Mobile - below 600px */
+@media (max-width: 600px) {
+  .banner {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mainContent {
+    order: 1;
+  }
+
+  .sideContent {
+    display: none;
+  }
+
+  .checklistMobile {
+    display: block;
+  }
+
+  .checklistDesktop {
+    display: none;
+  }
+
+  .title {
+    font-size: 22px;
+    padding-right: 32px;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .actions > * {
+    text-align: center;
+  }
+
+  .closeButton {
+    top: 12px;
+    right: 12px;
+  }
+}
+
+/* Small mobile - 320px and below */
+@media (max-width: 360px) {
+  .banner {
+    padding: 20px 16px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}

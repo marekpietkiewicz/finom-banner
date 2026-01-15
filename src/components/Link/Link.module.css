@@ -1,0 +1,36 @@
+.link {
+  color: #1a3a5c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1a3a5c;
+  transition: width 0.2s ease;
+}
+
+.link:hover {
+  color: #0d2236;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.link:focus-visible {
+  outline: 2px solid #1a3a5c;
+  outline-offset: 4px;
+  border-radius: 2px;
+}

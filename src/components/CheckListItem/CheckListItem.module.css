@@ -1,0 +1,23 @@
+.checkListItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.2s ease;
+}
+
+.checkListItem:hover {
+  transform: translateX(4px);
+}
+
+.checkIcon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.text {
+  color: #1a3a5c;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
