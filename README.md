@@ -76,7 +76,7 @@ pnpm preview
 ## 🏗 Project Structure
 
 - [src/components/Banner](src/components/Banner/Banner.tsx): Core banner component and its grid styling.
-- [src/components/ui](src/components/ui): Reusable atomic UI components (Button, Link, CheckList, etc.).
+- [src/components](src/components): Reusable atomic UI components (Button, Link, CheckList, etc.).
 - [src/i18n](src/i18n/index.ts): Central source for all localized strings.
 - [src/assets](src/assets): Image and graphic assets.
 
