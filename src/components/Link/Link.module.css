@@ -1,10 +1,13 @@
 .link {
-  color: #1a3a5c;
+  font-family: 'Poppins', sans-serif;
+  color: #0B002EA3;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  text-align: center;
   transition: all 0.2s ease;
   position: relative;
   padding-bottom: 2px;
@@ -17,12 +20,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #1a3a5c;
+  background-color: #0B002EA3;
   transition: width 0.2s ease;
 }
 
 .link:hover {
-  color: #0d2236;
+  color: #0B002E;
 }
 
 .link:hover::after {

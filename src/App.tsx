@@ -1,19 +1,15 @@
 import { useState } from "react";
 import { Banner } from "./components";
 import coinImage from "./assets/coins-currency.png";
+import { t } from "./i18n";
 import "./App.css";
 
 const BANNER_CONFIG = {
-  title: "Get the Business Funding You Need",
-  description:
-    "Expand your business with a flexible loan tailored to your needs. Whether you're investing in new equipment, increasing inventory, or boosting cash flow, we offer quick approvals and competitive rates to keep your business growing.",
-  checklistItems: [
-    "Fast approval process",
-    "Flexible repayment terms",
-    "Competitive interest rates",
-  ],
-  primaryButtonText: "Apply Now",
-  secondaryLinkText: "MORE INFORMATION",
+  title: t.banner.title,
+  description: t.banner.description,
+  checklistItems: t.banner.checklistItems,
+  primaryButtonText: t.banner.primaryButtonText,
+  secondaryLinkText: t.banner.secondaryLinkText,
   secondaryLinkHref: "https://finom.co",
 };
 
@@ -32,9 +28,9 @@ function App() {
     return (
       <div className="app-container">
         <p className="banner-removed-text">
-          Banner has been removed from DOM.
+          {t.app.bannerRemovedText}
           <button className="reset-button" onClick={() => setIsVisible(true)}>
-            Show Again
+            {t.app.showAgainButton}
           </button>
         </p>
       </div>

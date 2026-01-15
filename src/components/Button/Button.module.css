@@ -1,6 +1,5 @@
 .button {
   font-family: inherit;
-  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;
@@ -13,19 +12,23 @@
 }
 
 .primary {
-  background-color: #f05a4c;
-  color: white;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FF4C5C;
+  color: #FFFFFF;
   padding: 14px 32px;
   border-radius: 50px;
   font-size: 16px;
-  line-height: 1.2;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
   min-width: 140px;
 }
 
 .primary:hover {
-  background-color: #e04a3c;
+  background-color: #e8445a;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(240, 90, 76, 0.35);
+  box-shadow: 0 4px 12px rgba(255, 76, 92, 0.35);
 }
 
 .primary:active {

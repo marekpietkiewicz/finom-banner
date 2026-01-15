@@ -2,17 +2,15 @@
   position: relative;
   background: white;
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-  padding: 32px;
+  border: 2px solid #6666ff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px 44px;
   max-width: 700px;
+  min-height: 376px;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.banner:hover {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s ease;
 }
 
 .closeButton {
@@ -22,14 +20,28 @@
   z-index: 10;
 }
 
+.title {
+  font-family: 'Poppins', sans-serif;
+  color: #0B002E;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  line-height: 28px;
+  letter-spacing: 0;
+  width: 100%;
+}
+
 .content {
   display: flex;
-  gap: 24px;
+  gap: 32px;
+  align-items: flex-start;
 }
 
 .mainContent {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .sideContent {
@@ -39,19 +51,13 @@
   flex-shrink: 0;
 }
 
-.title {
-  color: #1a3a5c;
-  font-size: 28px;
-  font-weight: 700;
-  margin: 0 0 16px 0;
-  line-height: 1.2;
-  padding-right: 40px;
-}
-
 .description {
-  color: #6b7b8c;
+  font-family: 'Poppins', sans-serif;
+  color: #0B002E;
   font-size: 16px;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
   margin: 0 0 24px 0;
 }
 
@@ -69,6 +75,7 @@
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .imageContainer {
@@ -76,23 +83,24 @@
   justify-content: flex-end;
   align-items: flex-end;
   flex: 1;
+  position: relative;
+  overflow: visible;
 }
 
 .coinImage {
-  width: 160px;
-  height: auto;
+  width: 247.91px;
+  height: 247.91px;
   object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.coinImage:hover {
-  transform: scale(1.05) rotate(5deg);
+  transform: rotate(-3.5deg);
+  position: absolute;
+  top: -38.96px;
+  left: 18.52px;
 }
 
 /* Tablet */
 @media (max-width: 768px) {
   .banner {
-    padding: 24px;
+    padding: 24px 32px;
   }
 
   .title {
@@ -100,7 +108,8 @@
   }
 
   .coinImage {
-    width: 120px;
+    width: 150px;
+    transform: translateY(8px);
   }
 }
 
