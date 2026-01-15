@@ -1,16 +1,17 @@
 {
   "name": "finom-banner",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.1",
   "type": "module",
+  "author": "Marek Pietkiewicz",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest",
-    "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test": "NODE_OPTIONS='--no-warnings' vitest",
+    "test:run": "NODE_OPTIONS='--no-warnings' vitest run",
+    "test:coverage": "NODE_OPTIONS='--no-warnings' vitest run --coverage"
   },
   "dependencies": {
     "react": "^19.2.0",

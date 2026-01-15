@@ -35,9 +35,10 @@
 
 .content {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr auto 1fr 44px;
   column-gap: 32px;
+  justify-content: center;
   flex: 1;
 }
 
@@ -66,6 +67,7 @@
 .checklistDesktop {
   grid-area: 2 / 2;
   display: block;
+  transform: translateX(-10px);
 }
 
 .actions {
@@ -94,7 +96,7 @@
   transform: rotate(-3.5deg);
   position: absolute;
   top: -120px;
-  left: 30.52px;
+  left: 40.52px;
   opacity: 1;
 }
 
